@@ -12,6 +12,8 @@
 /build
 
 # misc
+/design
+.style-guide.md
 .DS_Store
 .env.local
 .env.development.local
