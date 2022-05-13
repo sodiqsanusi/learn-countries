@@ -12,7 +12,7 @@
 /build
 
 # misc
-src/design/
+design/
 style-guide.md
 .DS_Store
 .env.local
