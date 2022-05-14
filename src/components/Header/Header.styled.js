@@ -6,6 +6,9 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 900px){
+    padding: 3em 3.5em;
+  }
   a{
     width: 60%;
     font-size: min(6vw, 1.1rem);
@@ -32,5 +35,10 @@ export const ToggleButton = styled.button`
   :hover,:focus{
     transform: scale(0.95);
     opacity: 0.8;
+  }
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
