@@ -1,7 +1,9 @@
+import SearchAndFilter from "../../components/SearchAndFilter";
+
 const HomePage = () => {
   return ( 
     <main>
-      Homepage
+      <SearchAndFilter />
     </main>
    );
 }

@@ -33,4 +33,9 @@ export const ToggleButton = styled.button`
     transform: scale(0.95);
     opacity: 0.8;
   }
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
