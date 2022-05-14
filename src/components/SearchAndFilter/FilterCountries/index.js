@@ -12,7 +12,7 @@ const FilterCountries = () => {
       <span><FaChevronDown /></span>
       <FilterList isFilterListOpen={isFilterListOpen}>
         <li><Link to='/'>Africa</Link></li>
-        <li><Link to='/'>America</Link></li>
+        <li><Link to='/'>Americas</Link></li>
         <li><Link to='/'>Asia</Link></li>
         <li><Link to='/'>Europe</Link></li>
         <li><Link to='/'>Oceania</Link></li>

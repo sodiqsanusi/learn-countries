@@ -16,6 +16,7 @@ export const FilterArticle = styled.button`
   border-radius: 8px;
   cursor: pointer;
   margin-top: 2em;
+  @media (min-width: 900px){margin-top: 0}
   box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
   span{
     display: flex;

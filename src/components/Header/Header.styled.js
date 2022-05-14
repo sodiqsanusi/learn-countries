@@ -6,6 +6,9 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 900px){
+    padding: 3em 3.5em;
+  }
   a{
     width: 60%;
     font-size: min(6vw, 1.1rem);
