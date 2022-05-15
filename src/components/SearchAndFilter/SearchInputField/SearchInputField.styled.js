@@ -34,4 +34,8 @@ export const FormInput = styled.input`
    background-color: var(--overlayColor);
    color: var(--textColor);
    border-radius: 0 8px 8px 0;
+   ::placeholder{
+     color: var(--textColor);
+     opacity: 80%;
+   }
 `;
