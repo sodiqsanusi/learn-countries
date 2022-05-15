@@ -36,7 +36,7 @@ export const FilterList = styled.ul`
   padding: 1em 2em;
   z-index: 8;
   left: 0%;
-  bottom: -200px;
+  bottom: -230px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
   li{
     list-style: none;
