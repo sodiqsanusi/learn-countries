@@ -3,13 +3,14 @@ import styled from 'styled-components';
 export const Content = styled.main`
   display: grid;
   padding: 1em 2em;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 50%), 1fr));
   grid-gap: 5em 1em;
 
   a{
     color: var(--textColor);
     text-decoration: none;
-    width: 262px;
+    border-radius: 8px;
+    width: 260px;
     justify-self: center;
     animation: animateThumb 1.5s;
     transition: .3s;
