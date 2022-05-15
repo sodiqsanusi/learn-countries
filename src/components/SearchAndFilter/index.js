@@ -2,11 +2,11 @@ import FilterCountries from "./FilterCountries";
 import { Container } from "./SearchAndFilter.styled";
 import SearchInputField from "./SearchInputField";
 
-const SearchAndFilter = () => {
+const SearchAndFilter = ({whichFilterIsApplied}) => {
   return ( 
     <Container>
       <SearchInputField />
-      <FilterCountries />
+      <FilterCountries whichFilterIsApplied={whichFilterIsApplied}/>
     </Container>
    );
 }
