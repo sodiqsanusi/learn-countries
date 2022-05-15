@@ -36,7 +36,7 @@ const CountrySearchPage = () => {
   return ( 
     <main>
       <SearchAndFilter />
-      {data && loading && <LoadCircle />}
+      {(!data || loading) && <LoadCircle />}
       {data && <CountriesGrid allCountries={sample}/>}
       {data && <NavigateGrid isThisTheLastArray={isThisTheLastArray}/>}
     </main>
