@@ -14,10 +14,11 @@ const SearchInputField = () => {
   }
 
   return ( 
-    <FormContainer onSubmit={handleSubmit}>
+    <FormContainer onSubmit={handleSubmit} role='search'>
       <FormButton aria-label='Click to search country inputted'><FaSearch /></FormButton>
       <FormInput
-        type="text" placeholder="Search for a country..."
+        type="search" placeholder="Search for a country..."
+        autoComplete='off'
         value={searchData} onChange={(e)=> setSearchData(e.target.value)}
       />
     </FormContainer>

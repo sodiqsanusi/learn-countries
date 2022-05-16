@@ -5,12 +5,18 @@ import LoadCircle from "../../components/LoadCircle";
 import NavigateGrid from "../../components/NavigateGrid";
 import { useContext, useEffect } from "react";
 import { GlobalContext } from "../../GlobalContext";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const FilteredByRegionPage = () => {
   const {whichRegion} = useParams();
 
-  const {data, loading} = useFetch(`https://restcountries.com/v3.1/region/${whichRegion}?fields=name,capital,region,population,flags,cca3`);
+  const {data, loading, error} = useFetch(`https://restcountries.com/v3.1/region/${whichRegion}?fields=name,capital,region,population,flags,cca3`);
+  let navigate = useNavigate();
+  setTimeout(() => {
+    if(error){
+      navigate('../error')
+    }
+  }, 500);
   const {whichPageAreYouOn, changePage} = useContext(GlobalContext);
   useEffect(() => {
     changePage(0)
