@@ -20,7 +20,6 @@ export const FilterArticle = styled.button`
   box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
   span{
     display: flex;
-    transition: 0.3s;
     align-items: center;
     justify-content: center;
   }
@@ -29,7 +28,7 @@ export const FilterArticle = styled.button`
 export const FilterList = styled.ul`
   position: absolute;
   display: ${({isFilterListOpen}) => isFilterListOpen ? 'block' : 'none'};
-  transition: 0.3s;
+  transition: display 0.3s;
   background-color: var(--overlayColor);
   border-radius: 8px;
   width: 100%;
@@ -38,12 +37,14 @@ export const FilterList = styled.ul`
   left: 0%;
   bottom: -230px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  text-align: left;
   li{
     list-style: none;
     line-height: 2;
   }a{
     text-decoration: none;
     color: var(--textColor);
+    transition: text-decoration .3s;
     :hover,:focus{
       text-decoration: underline;
     }

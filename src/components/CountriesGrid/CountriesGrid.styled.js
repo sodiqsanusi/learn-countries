@@ -13,7 +13,7 @@ export const Content = styled.main`
     width: 260px;
     justify-self: center;
     animation: animateThumb 1.5s;
-    transition: .3s;
+    transition: opacity .3s, transform .3s;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 29px 0px;
     :hover,
     :focus{

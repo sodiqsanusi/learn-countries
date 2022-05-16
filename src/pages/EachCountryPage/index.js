@@ -3,6 +3,7 @@ import { FaLongArrowAltLeft } from 'react-icons/fa';
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import LoadCircle from "../../components/LoadCircle";
+import { Container, MainBtn } from "./EachCountryPage.styled";
 
 const EachCountryPage = () => {
 
@@ -22,8 +23,8 @@ const EachCountryPage = () => {
   }
 
   return (
-    <main>
-    <button onClick={() => navigate(-1)}><FaLongArrowAltLeft /> Back</button>
+    <Container>
+    <MainBtn onClick={() => navigate(-1)}><FaLongArrowAltLeft /> Back</MainBtn>
     <article>
       <section><img src="" alt="" /></section>
       <article>
@@ -60,7 +61,7 @@ const EachCountryPage = () => {
         </aside>)}
       </article>
     </article>
-  </main>
+  </Container>
   );
 }
  
