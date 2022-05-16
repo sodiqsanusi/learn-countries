@@ -14,11 +14,8 @@ const useFetch = (api) => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-       const abortComp  = new AbortController();
        setLoading(true);
-       fetch(api,{
-           signal: abortComp.signal
-       })
+       fetch(api)
        .then(
             res => {
                 if(!res.ok) {
@@ -32,16 +29,9 @@ const useFetch = (api) => {
            setData(data);
        })
        .catch((err) => {
-           if(err.name === "AbortError") {
-               console.log("Abort Error!")
-           }
            setLoading(false);
-           setError(err.message);
+           setError('ish');
        })
-
-       return () => {
-           abortComp.abort();
-       }
     }, [api])
 
 

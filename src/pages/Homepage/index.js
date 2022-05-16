@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../GlobalContext";
+import {useNavigate} from 'react-router-dom'
 import CountriesGrid from "../../components/CountriesGrid";
 import LoadCircle from "../../components/LoadCircle";
 import NavigateGrid from "../../components/NavigateGrid";
@@ -8,9 +9,14 @@ import useFetch from '../../hooks/useFetch';
 
 const HomePage = () => {
 
-  const {data} = useFetch('https://restcountries.com/v3.1/all?fields=name,capital,region,population,flags,cca3');
+  const {data, error} = useFetch('https://restcountries.com/v3.1/all?fields=name,capital,region,population,flags,cca3');
   const {whichPageAreYouOn} = useContext(GlobalContext);
-
+  let navigate = useNavigate();
+  setTimeout(() => {
+    if(error){
+      navigate('../error')
+    }
+  }, 500);
   let isThisTheLastArray;
   let sample;
   if(data){

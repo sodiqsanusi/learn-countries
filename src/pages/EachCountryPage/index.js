@@ -8,10 +8,15 @@ import { BorderSideNote, Container, ContainsAll, MainArticle, MainBtn } from "./
 const EachCountryPage = () => {
 
   const { countryCode } = useParams();
-  const {data, loading} = useFetch(`https://restcountries.com/v3.1/alpha/${countryCode}?fields=flags,name,tld,population,region,subregion,capital,currencies,languages,borders`);
+  const {data, loading, error} = useFetch(`https://restcountries.com/v3.1/alpha/${countryCode}?fields=flags,name,tld,population,region,subregion,capital,currencies,languages,borders`);
+  let navigate = useNavigate();
+  setTimeout(() => {
+    if(error){
+      navigate('../error')
+    }
+  }, 500);
   let getCurrency;
   let getLanguages;
-  let navigate = useNavigate();
   if (data) {
     getCurrency = Object.keys(data.currencies);
     getLanguages = Object.keys(data.languages);

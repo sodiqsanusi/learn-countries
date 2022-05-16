@@ -28,6 +28,7 @@ export const FormButton = styled.button`
 export const FormInput = styled.input`
    width: 85%;
    padding: 1em 0;
+   padding-right: 1em;
    font-size: 1rem;
    border: none;
    outline: none;
