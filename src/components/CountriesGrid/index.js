@@ -8,7 +8,7 @@ const CountriesGrid = ({allCountries}) => {
   return ( 
     <Content>
       {allCountries.map( country => (
-        <Link to='/' key={country.cca3}>
+        <Link to={`/country/${country.cca3}`} key={country.cca3}>
         <section><img src={country.flags.svg} alt={`${country.name.common}'s national flag`} loading="lazy"/></section>
         <article>
           <h2>{country.name.common}</h2>
