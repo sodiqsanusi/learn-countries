@@ -3,7 +3,7 @@ import { FaLongArrowAltLeft } from 'react-icons/fa';
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import LoadCircle from "../../components/LoadCircle";
-import { Container, MainBtn } from "./EachCountryPage.styled";
+import { BorderSideNote, Container, ContainsAll, MainArticle, MainBtn } from "./EachCountryPage.styled";
 
 const EachCountryPage = () => {
 
@@ -25,9 +25,9 @@ const EachCountryPage = () => {
   return (
     <Container>
     <MainBtn onClick={() => navigate(-1)}><FaLongArrowAltLeft /> Back</MainBtn>
-    <article>
-      <section><img src="" alt="" /></section>
-      <article>
+    <ContainsAll>
+      <section><img src={data.flags.svg} alt={`${data.name.common}'s national flag`} /></section>
+      <MainArticle>
         <h2>{data.name.official}</h2>
         <main>
           <ul>
@@ -51,16 +51,16 @@ const EachCountryPage = () => {
           }</li>
           </ul>
         </main>
-        { data.borders.length>0 && (<aside>
-          <h3>Border Countries</h3>
+        { data.borders.length>0 && (<BorderSideNote>
+          <h3>Border Countries:</h3>
           <ul>
             {data.borders.map(border => (
               <li key={border}><Link to={`../country/${border}`}><button>{border}</button></Link></li>
             ))}
           </ul>
-        </aside>)}
-      </article>
-    </article>
+        </BorderSideNote>)}
+      </MainArticle>
+    </ContainsAll>
   </Container>
   );
 }
