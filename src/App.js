@@ -21,7 +21,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/region/:whichRegion' element={<FilteredByRegionPage />} />
           <Route path='/search/:searchedCountry' element={<CountrySearchPage />} />
-          <Route path='/country/:name' element={<EachCountryPage />} />
+          <Route path='/country/:countryCode' element={<EachCountryPage />} />
         </Routes>
       </Router>
     </>
