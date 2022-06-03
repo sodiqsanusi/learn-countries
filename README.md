@@ -20,7 +20,7 @@ The goal was to build a web app that allows users to check countries, search, an
 ### The challenge
 Users should be able to:
 
-- View the optimal layout for the game depending on their device's screen size.
+- View the optimal layout for the application depending on their device's screen size.
 - See all countries from the API on the homepage.
 - Search for a country using an `input` field.
 - Filter countries by region.
