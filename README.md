@@ -32,8 +32,8 @@ Users should be able to:
 ![](./screenshot.png)
 
 ### Links
-- Solution URL: [https://github.com/sodiqsanusi/learn-countries/]()
-- Live Site URL: [https://yourcountries.netlify.app/]()
+- Solution URL: [https://github.com/sodiqsanusi/learn-countries/](https://github.com/sodiqsanusi/learn-countries/)
+- Live Site URL: [https://yourcountries.netlify.app/](https://yourcountries.netlify.app/)
 
 ## My process
 I'm sure you're tired of hearing this😅, buh still I'm saying it. Mobile-first workflow, "Thinking in React" component architecture, and a lot of trial and error. Didn't have access to the design raw files in Figma and Sketch, so had to build based on what I could see in the design images, I tried tho.
